@@ -23,5 +23,6 @@ We then took this D latch, in combination with mux and demux created in earlier 
 ###  Why can we not just use structural Verilog to implement latches?
 
 ### What is the meaning of always @(*) in a sensitivity block?
+Statements in this block are evaluated in the order given by the code executed by the simulator only when one of more of the signals in the sensitivity list changes value. This essentially creates a sensitivity list for the combinational logic blocks using the * so there's no need to list every input signal. 
 
 ### What importance is memory to digital circuits?
