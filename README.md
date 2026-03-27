@@ -12,7 +12,7 @@ In this lab, you learned about the basic building block of sequential circuits: 
 | Question 3 | Your answers to the question | 25% |
 
 ## Names
-
+Steven Greene Diego Vargas
 ## Summary
 In this lab, we developed a D-Latch by examining the circuitry for an SR latch and adjusted the code on verilog. The DLatch has the inputs D and E(or Clock) as the input, with the output of Q. This ensures that the Q output must take the value of D when the enable is 1. Since no Else clause is given the latch will be synthesized ot maintain the value of Q when Clock is 0. 
 
@@ -22,7 +22,10 @@ We then took this D latch, in combination with mux and demux created in earlier 
 
 ###  Why can we not just use structural Verilog to implement latches?
 
+This will error out about the combinatorial loop and will not let you proceed. Using Behavioral verlog though, we use the Sensitivity Blocks and the reg keyword which allows us to synthesize circuits with memory. Sensitivity blocks allow us to specify to the synthesis engine what signals our memory is sequential to.
+
 ### What is the meaning of always @(*) in a sensitivity block?
 Statements in this block are evaluated in the order given by the code executed by the simulator only when one of more of the signals in the sensitivity list changes value. This essentially creates a sensitivity list for the combinational logic blocks using the * so there's no need to list every input signal. 
 
 ### What importance is memory to digital circuits?
+Memory allows the circuit to remember where the circuit is in the process so that we can latch switches, and enable more complex systems. This essentially allows us to turn a collection of switches into a functional complex system like a calculator where we don't need to hold all the numbers/switches down at the same time to pull up a calculation at the basic level. 
